@@ -1,0 +1,10 @@
+#Configuracion de conexión a Mongo
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      host: localhost
+      database: proveedor
+      username: proveedor
+      password: proveedor
+      port: 27017
