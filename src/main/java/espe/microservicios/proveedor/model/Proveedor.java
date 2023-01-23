@@ -31,4 +31,8 @@ public class Proveedor {
     @DBRef
     @JsonIgnore
     private List<CalificacionProveedor> calificacionProveedores;
+    @DBRef
+    @JsonIgnore
+    private List<CalificacionProducto> calificacionProducto;
+
 }

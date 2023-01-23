@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Document
 @Data
 @AllArgsConstructor
@@ -17,4 +19,11 @@ public class Producto {
     private String nombre;
     private Double precio;
     private String descripcion;
+
+    public List<CalificacionProducto> getCalificacionProducto() {
+        return null;
+    }
+
+    public void setCalificacionProducto(List<CalificacionProducto> list) {
+    }
 }
