@@ -1,15 +1,13 @@
 package espe.microservicios.proveedor.controller;
 
 import espe.microservicios.proveedor.model.Direcciones;
-import espe.microservicios.proveedor.model.Producto;
-import espe.microservicios.proveedor.services.interfaces.ProductoService;
+import espe.microservicios.proveedor.services.interfaces.DireccionService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,7 +46,7 @@ public class DireccionesController {
     @GetMapping(path = "")
     public ResponseEntity<List<Direcciones>> getAllDireccionsFromProveedor(
             @RequestParam("idProveedor") String idProveedor) {
-        List<Direcciones> direccion = this.direccionService.getAllDireccionsFromProveedor(idProveedor);
+        List<Direcciones> direccion = this.direccionService.getAllDireccionFromProveedor(idProveedor);
         if (direccion == null) {
             return ResponseEntity.notFound().build();
         }
